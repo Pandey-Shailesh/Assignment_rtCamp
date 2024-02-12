@@ -12,6 +12,16 @@ const { chromium } = require('playwright');
     // Navigate to the Amazon login page
     await page.click('//a[@id="nav-link-accountList"]');
 
+    // Fill login form
+    await page.waitForSelector('//input[@id="ap_email"]');
+    await page.fill('//input[@id="ap_email"]', 'shaileshpandey2081998@gmail.com');
+    await page.click('//input[@id="continue"]')
+
+    await page.waitForSelector('//input[@id="ap_password"]');
+    await page.fill('//input[@id="ap_password"]','Shailesh@123')
+    await page.click('//input[@id="signInSubmit"]')
+
+
 
 
     // Close the browser
