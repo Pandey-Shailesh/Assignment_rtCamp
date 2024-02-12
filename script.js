@@ -22,7 +22,10 @@ const { chromium } = require('playwright');
     await page.click('//input[@id="signInSubmit"]')
 
 
-
+    // Validation Search Result
+    await page.waitForSelector('//input[@id="twotabsearchtextbox"]');
+    await page.fill('//input[@id="twotabsearchtextbox"]','adidas shoes for men')
+    await page.click('//input[@id="nav-search-submit-button"]')
 
     // Close the browser
     //   await browser.close();
