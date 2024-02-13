@@ -14,11 +14,11 @@ const { chromium } = require('playwright');
 
     // Fill login form
     await page.waitForSelector('//input[@id="ap_email"]');
-    await page.fill('//input[@id="ap_email"]', 'shaileshpandey2081998@gmail.com');
+    await page.fill('//input[@id="ap_email"]', '*********************************');
     await page.click('//input[@id="continue"]');
 
     await page.waitForSelector('//input[@id="ap_password"]');
-    await page.fill('//input[@id="ap_password"]', 'Shailesh@123');
+    await page.fill('//input[@id="ap_password"]', '*******************************');
     await page.click('//input[@id="signInSubmit"]');
 
 
@@ -28,28 +28,7 @@ const { chromium } = require('playwright');
     await page.click('//input[@id="nav-search-submit-button"]');
 
 
-
-
-// Validation Buy Now Result
-await page.waitForSelector('//input[@id="buy-now-button"]');
-await page.click('//input[@id="buy-now-button"]');
-
-await page.waitForSelector('//span[@class="nav-cart-icon"]');
-await page.click('//span[@class="nav-cart-icon"]');
-
-
-await page.waitForSelector('//span[@text=" Go to Cart "]');
-await page.click('//span[@text="Go to Card"]');
-
-await page.waitForSelector('//input[@class="a-button-input "]');
-await page.click('//input[@class="a-button-input "]');
-
-await page.waitForSelector('//input[@name="placeYourOrder1"]');
-await page.click('//input[@name="placeYourOrder1"]');
-
-setTimeout(50000);
-
-     Validate Product Wishlist functionality
+    // Validate Product Wishlist functionality
     await page.waitForSelector('//div[@class="_bGlmZ_tint_M0L-m"]');
     await page.click('//div[@class="_bGlmZ_tint_M0L-m"]');
 
@@ -66,6 +45,27 @@ setTimeout(50000);
 
     await page.waitForSelector('//a[@id="atwl-link-to-list-K3RM5WUP1VOK"]',{timeout:2000});
     await page.click('//a[@id="atwl-link-to-list-K3RM5WUP1VOK"]');
+
+    // Validation Buy Now Result
+    await page.waitForSelector('//input[@id="buy-now-button"]');
+    await page.click('//input[@id="buy-now-button"]');
+
+    await page.waitForSelector('//span[@class="nav-cart-icon"]');
+    await page.click('//span[@class="nav-cart-icon"]');
+
+
+    await page.waitForSelector('//span[@text=" Go to Cart "]');
+    await page.click('//span[@text="Go to Card"]');
+
+    await page.waitForSelector('//input[@class="a-button-input "]');
+    await page.click('//input[@class="a-button-input "]');
+
+    await page.waitForSelector('//input[@name="placeYourOrder1"]');
+    await page.click('//input[@name="placeYourOrder1"]');
+
+    setTimeout(50000);
+
+
 
 
     // Close the browser
